@@ -1,4 +1,4 @@
-name: ci
+name: build and push
 
 on:
   push:
@@ -26,4 +26,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: muhgumus/moniple-agent:$GITHUB_REF_NAME
+          tags: "muhgumus/moniple-agent:$GITHUB_REF_NAME"
