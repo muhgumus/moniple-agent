@@ -38,6 +38,10 @@ app.use(function(req, res, next) {
   });
 }
 
+app.get('/health', (req, res) => {
+    return res.json({ success: true });
+})
+
 app.get('/metrics/ns', (req, res) => {
     fetch(process.env.PROMETHEUS_API_URL + '/query?query=' + encodeURIComponent(process.env.PQL_NS))
     .then((response) => response.json())
