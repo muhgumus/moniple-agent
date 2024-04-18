@@ -3,7 +3,7 @@ name: build and push
 on:
   push:
     branches:
-      - 'master'
+      - 'main'
 
 jobs:
   docker:
@@ -26,4 +26,4 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: muhgumus/moniple-agent:master
+          tags: muhgumus/moniple-agent:main
