@@ -31,7 +31,7 @@ function niceBytes(x){
 }
 
 if(process.env.PROMETHEUS_API_USER && process.env.PROMETHEUS_API_PASSWORD){
-    var basicauth= Buffer.from("${process.env.PROMETHEUS_API_USER}:${process.env.PROMETHEUS_API_PASSWORD}").toString('base64')
+    var basicauth=Buffer.from("${process.env.PROMETHEUS_API_USER}:${process.env.PROMETHEUS_API_PASSWORD}").toString('base64')
 app.use(function(req, res, next) {
     res.header("Authorization", "Basic $basicauth");
     next();
