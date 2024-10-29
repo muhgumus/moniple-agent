@@ -1,11 +1,15 @@
 const { response } = require('express');
 const express = require('express')
-const app = express()
 const cors = require('cors');
+const app = express()
 const port = 3000
 require('dotenv').config();
 
-app.use(cors());
+app.use(cors({
+    origin: '*', // Tüm kaynaklara izin ver
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // İzin verilen yöntemler
+    allowedHeaders: ['Content-Type', 'Authorization'] // İzin verilen başlıklar
+  }));
 
 // pipe fix 7
 
