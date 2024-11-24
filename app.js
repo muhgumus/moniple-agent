@@ -8,7 +8,7 @@ require('dotenv').config();
 app.use(cors({
     origin: '*', // Tüm kaynaklara izin ver
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // İzin verilen yöntemler
-    allowedHeaders: ['Content-Type', 'Authorization'] // İzin verilen başlıklar
+    allowedHeaders: ['*', '*'] // İzin verilen başlıklar
   }));
 
 // pipe fix 7
